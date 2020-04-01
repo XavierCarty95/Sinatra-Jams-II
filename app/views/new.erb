@@ -1,0 +1,25 @@
+<form method = "POST" action = "/plays">
+  <select name="artist_id">
+    <!-- How would you dynamically generate <option/> elements for each of the artist instances? -->
+   <% @artists.each do |artist_instance| %>
+     <option value = "<%=artist_instance.id %>"> 
+       <%=artist_instance.name%> 
+     
+     </option>
+     <% end %>
+  </select>
+  <br>
+
+  <select name="instrument_id">
+    <!-- How would you dynamically generate <option/> elements for each of the instrument instances? -->
+   <% @instruments.each do |instrument_instance| %>
+     <option value = "<%=instrument_instance.id %>"> 
+       <%=instrument_instance.name%> 
+     
+     </option>
+     <% end %>
+  
+  
+  </select>
+  <input type = "submit"> 
+</form>
